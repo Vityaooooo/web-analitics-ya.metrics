@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title> Бронирование отлей </title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/logo/favicon.png">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <!-- Magnific popup css -->
+    <link rel="stylesheet" href="css/magnific-popup.css.css">
+    <!-- Slick -->
+    <!-- <link rel="stylesheet" href="css/slick.css"> -->
+    <!-- line awesome -->
+    <!-- <link rel="stylesheet" href="css/line-awesome.min.css"> -->
+    <!-- Image Uploader -->
+    <link rel="stylesheet" href="css/image-uploader.min.css">
+    <!-- jQuery Ui Css -->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/main_start.css">
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(99239422, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/99239422" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+
+
+</head>
+<body>
+    
+
+
+
+    <!-- ========================== Banner Five Start ========================= -->
+<section class="bg-white" style="padding: 50px">
+    <div class="container container-two">
+        <div class="row gy-4">
+            <div class="col-lg-12">
+                <div class="banner-inner position-relative">
+                    <div class="">
+                        <span class="banner-content__subtitle text-uppercase font-14">Задание</span>
+                        <h2  style="font-family: 'Poppins',sans-serif;"><b>Пожалуйста ознакомьтесь с заданием</b></h2>
+                        <p class="font-20">Данный сайт представляет из себя сервис по поиску и аренде жилья на короткий срок</p>
+                        <p class="font-20">Ваше задание найти жилье соответвующее следующим критериям:</p>
+                        <ul class="font-20" style="list-style-type: disc; padding: 20pt; margin: auto;" >
+                            <li><b>Апартаменты</b></li>
+                            <li>Стоимость <b>до 6000₽ за сутки</b></li>
+                            <li>Находится в городе Санкт-Петербург</li>
+                            <li>Количество проживающих <b>больше 3х</b> </li>
+                            <li>Количество спальных мест <b>больше 1го</b></li>
+                            <li>Разрешено <b>с детьми</b></li>
+                            <li>Включены все следующие удобства: беспроводной интернет Wi-Fi,
+                                постельное белье, полотенце</li>
+                            <li>Гостей <b>больше 2х</b></li>
+                            <li>Количество кроватей <b>2 и более</b>.</li>
+                        </ul>
+                          <p class="font-20">Вы всегда сможете вернуться к заданию даже если нажмете кнопку "Приступить". Найти его можно меню, клинув на кнопку <b>"Задание"</b></p>
+                          <br>
+                          <p class="font-20">Это прототип сайта. Здесь тестируются алгоритмы и структура самой системы. Все поля можно заполнять несуществующими данными, они нигде не будут храниться.</p>
+                          <p class="font-20">Спасибо за участие!</p>
+                          <button id="startButton" onclick="redirectToVersion()" class="btn btn-main fw-normal">Приступить
+                            <span class="icon-right"><i class="fas fa-arrow-right"></i></span>
+                        </button>
+                    </div>            
+                </div>
+            </div>
+    </div>
+</section>
+<!-- ========================== Banner Five End ========================= -->
+
+   
+    <!-- Jquery js -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Bundle Js -->
+    <script src="js/boostrap.bundle.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="js/magnific-popup.min.js"></script>
+    <!-- Slick js -->
+    <script src="js/slick.min.js"></script>
+    <!-- Counter Up Js -->
+    <script src="js/counterup.min.js"></script>
+    <!-- Марquee text slider -->
+    <script src="js/jquery.Марquee.min.js"></script>
+    <!-- Image Uploader -->
+    <script src="js/image-uploader.min.js"></script>
+    <!-- jQuery Ui Css -->
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!-- main js -->
+    <script src="js/main.js"></script>
+
+<!-- Custom Script -->
+<script>
+    function redirectToVersion() {
+        const randomVersion = Math.random() < 0.5 ? 'a' : 'b';
+        localStorage.setItem('bookingStartTime', Date.now());
+        ym(99239422, 'reachGoal', `start_${randomVersion}`);
+        window.location.href = `./version-${randomVersion}/Main_${randomVersion}.html`;
+    }
+</script>
+
+    </body>
+</html>
+
+
