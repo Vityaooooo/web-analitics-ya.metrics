@@ -605,17 +605,17 @@
         
         function endBook() {
             const startTime = localStorage.getItem('bookingStartTime');
+            let duration;
             if (startTime) {
-                const duration = Math.round((Date.now() - startTime) / 1000);
+                duration = Math.round((Date.now() - startTime) / 1000);
             }
 
             ym(99239422, 'reachGoal', 'complete_book', {
                 duration: duration,
                 version: window.location.pathname.includes('version-a') ? 'A' : 'B' 
-
             });
-            ym(99239422,'reachGoal','book_completed')
 
+            ym(99239422,'reachGoal','book_completed')
             localStorage.removeItem('bookingStartTime');
         }
     </script>
