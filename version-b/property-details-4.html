@@ -599,7 +599,6 @@
 
     <script>
         document.getElementById('metricsSubmit').addEventListener('submit', (evt) => {
-            const URL_SHEET = 'https://script.google.com/macros/s/AKfycbxGE3AKgdQreOpe24r2mlpgZ5L1zffWdgv22WqgC5DwIUSHgHLwiVbvFJHc2lokNJiPcQ/exec';
             evt.preventDefault();
             endBook();
             sendExcel()
@@ -616,12 +615,13 @@
                 duration: duration,
                 version: window.location.pathname.includes('version-a') ? 'A' : 'B' 
             });
-
+            
             // ym(99239422,'reachGoal','book_completed')
             // localStorage.removeItem('bookingStartTime');
         }
-
+        
         function sendExcel() {
+            const URL_SHEET = 'https://script.google.com/macros/s/AKfycbxGE3AKgdQreOpe24r2mlpgZ5L1zffWdgv22WqgC5DwIUSHgHLwiVbvFJHc2lokNJiPcQ/exec';
             const startTime = localStorage.getItem('bookingStartTime');
             const endTime = Date.now();
             const version = localStorage.getItem('version');
