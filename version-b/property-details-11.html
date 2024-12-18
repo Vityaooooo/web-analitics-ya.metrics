@@ -30,7 +30,7 @@
 </head>
 <body>
     <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
+<!-- <script type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();
     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -44,7 +44,7 @@
          webvisor:true
     });
  </script>
- <noscript><div><img src="https://mc.yandex.ru/watch/99239422" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <noscript><div><img src="https://mc.yandex.ru/watch/99239422" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
  <!-- /Yandex.Metrika counter -->
     
     
@@ -408,7 +408,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
         </div>
         <div class="modal-body">
-            <form>
+            <form id="metricsSubmit">
             <!-- Поле Имя и Фамилия -->
             <div class="mb-3">
               <label for="fullName" class="form-label">Имя и фамилия</label>
@@ -429,7 +429,7 @@
 
             <!-- Кнопки отправки и закрытия -->
             <div class="d-flex justify-content-end">
-              <button type="submit" class="btn btn-main" onclick="endBook()">Отправить</button>
+              <button type="submit" class="btn btn-main">Отправить</button>
             </div>
           </form>
         </div>
@@ -603,6 +603,11 @@
     <!-- main js -->
     <script src="../js/main.js"></script>
     <script>
+        document.getElementById('metricsSubmit').addEventListener('submit', (evt) => {
+            evt.preventDefault();
+            endBook();
+        })
+
         function endBook() {
             const startTime = localStorage.getItem('bookingStartTime');
             if (startTime) {
