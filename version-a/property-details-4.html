@@ -599,8 +599,10 @@
 
     <script>
         document.getElementById('metricsSubmit').addEventListener('submit', (evt) => {
+            const URL_SHEET = 'https://script.google.com/macros/s/AKfycbxGE3AKgdQreOpe24r2mlpgZ5L1zffWdgv22WqgC5DwIUSHgHLwiVbvFJHc2lokNJiPcQ/exec';
             evt.preventDefault();
             endBook();
+            sendExcel()
         })
         
         function endBook() {
@@ -615,10 +617,49 @@
                 version: window.location.pathname.includes('version-a') ? 'A' : 'B' 
             });
 
-            ym(99239422,'reachGoal','book_completed')
+            // ym(99239422,'reachGoal','book_completed')
+            // localStorage.removeItem('bookingStartTime');
+        }
+
+        function sendExcel() {
+            const startTime = localStorage.getItem('bookingStartTime');
+            const endTime = Date.now();
+            const version = localStorage.getItem('version');
+            const eventType = 'complete_booking';
+
+            let details = {
+                startTime, 
+                endTime, 
+                version, 
+                eventType
+            }
+
+            let formBody = [];
+
+            for (let property in details) {
+                let encodedKey = encodeURIComponent(property);
+                let encodedValue = encodeURIComponent(details[property]);
+                formBody.push(encodedKey + '=' + encodedValue);
+            }
+
+            formBody = formBody.join("&");
+
+            fetch(URL_SHEET, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+                },
+                cors: "no-cors",
+                body: formBody,
+            })
+                .then(res => res.text())
+                .then((res) => console.log(res))
+                .catch((err) => console.log(err))
+
+            
             localStorage.removeItem('bookingStartTime');
+            localStorage.removeItem('version');
         }
     </script>
-
     </body>
 </html>
