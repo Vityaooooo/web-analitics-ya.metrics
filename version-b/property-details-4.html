@@ -585,17 +585,16 @@
         function endBook() {
             const startTime = localStorage.getItem('bookingStartTime');
             if (startTime) {
-            // Вычисляем время, потраченное пользователем
                 const duration = Math.round((Date.now() - startTime) / 1000);
             }
 
             ym(99239422, 'reachGoal', 'complete_book', {
                 duration: duration,
-                version: window.location.pathname.includes('version-a') ? 'A' : 'B' // Определяем версию сайта
+                version: window.location.pathname.includes('version-a') ? 'A' : 'B' 
 
             });
+            ym(99239422,'reachGoal','book_completed')
 
-            // Удаляем время старта из localStorage, чтобы избежать дублирования
             localStorage.removeItem('bookingStartTime');
         }
     </script>
