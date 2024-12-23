@@ -118,6 +118,13 @@
         ym(99239422, 'reachGoal', `start_${randomVersion}`);
         window.location.href = `./version-${randomVersion}/Main_${randomVersion}.html`;
         localStorage.setItem('version', randomVersion);
+
+        let secureID;
+
+        if (localStorage.getItem('user') === null) {
+            secureID = crypto.randomUUID();
+            localStorage.setItem('user', secureID);
+        }
     }
 </script>
 

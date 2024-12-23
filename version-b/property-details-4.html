@@ -621,13 +621,15 @@
         }
         
         function sendExcel() {
-            const URL_SHEET = 'https://script.google.com/macros/s/AKfycbxGE3AKgdQreOpe24r2mlpgZ5L1zffWdgv22WqgC5DwIUSHgHLwiVbvFJHc2lokNJiPcQ/exec';
+            const URL_SHEET = 'https://script.google.com/macros/s/AKfycbxzVP9qqJeHVM2vfBx6mCUe5aKxYiMN0TjiistB4vqkYZIW4kjZzg1XFBJg9qGptZ2tGA/exec';
             const startTime = localStorage.getItem('bookingStartTime');
             const endTime = Date.now();
             const version = localStorage.getItem('version');
+            const user_ID = localStorage.getItem('user')
             const eventType = 'complete_booking';
 
             let details = {
+                user_ID,
                 startTime, 
                 endTime, 
                 version, 
@@ -659,6 +661,8 @@
             
             localStorage.removeItem('bookingStartTime');
             localStorage.removeItem('version');
+
+            alert('Спасибо что прошли это задание');
         }
     </script>
 
