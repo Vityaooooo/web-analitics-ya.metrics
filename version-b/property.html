@@ -138,13 +138,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
             <div class="modal-body">
-                <p class="font-20">Ваше задание найти жилье соответвующее следующим
-                    критериям:</p>
-                    <ul class="font-20" style="list-style-type: disc; padding: 20pt; margin: auto;" >
-                        <li><b>Апартаменты</b></li>
+                <p class="font-20">Ваше задание найти жилье соответвующее критериям ниже. Для этого перейдите во вкладку "Недвижимость" -> выберите предложение -> на странице предложения нажмите кнопку "Забронировать" -> введите любые данные -> нажмите кнопку "Отправить" -> при успешном завершении задания у вас вверху браузера появится окошка, в котором вы получите сообщенеи, что задание выполнено успешно. В ином случае вы полуучите сообщение "Это неверное предложение". При получении такого сообщения пожалуйста вернитесь на вкладку "Недвижимость" и поищите снова</p>
+                            <ul class="font-20" style="list-style-type: disc; padding: 20pt; margin: auto;" >
+                                <li><b>Апартаменты</b></li>
                         <li>Стоимость <b>до 6000₽ за сутки</b></li>
                         <li>Находится в городе Санкт-Петербург</li>
-                        <li>Количество проживающих <b>больше 3х</b> </li>
                         <li>Количество спальных мест <b>больше 1го</b></li>
                         <li>Разрешено <b>с детьми</b></li>
                         <li>Включены все следующие удобства: беспроводной интернет Wi-Fi,
@@ -283,6 +281,124 @@
     </div>
 </div>
             <div class="row gy-4">
+                <div class="col-lg-4 ps-lg-5">
+                    <!-- =================== Search Sidebar Start ======================= -->
+<div class="search-sidebar">
+    <form action="#" method="post" autocomplete="off">
+        
+        <div class="search-sidebar__item">
+            <h6 class="search-sidebar__title mb-4">Тип</h6>
+            <div class="common-check">
+                <input class="form-check-input type" type="checkbox" value="" id="Дом">
+                <label class="form-check-label" for="House">
+                    Дом
+                </label>
+            </div>
+            <div class="common-check">
+                <input class="form-check-input type" type="checkbox" value="" id="Отель">
+                <label class="form-check-label" for="House">
+                    Отель
+                </label>
+            </div>
+            <div class="common-check">
+                <input class="form-check-input type" type="checkbox" value="" id="Квартира">
+                <label class="form-check-label" for="Single">
+                    Квартира
+                </label>
+            </div>
+            <div class="common-check">
+                <input class="form-check-input type" type="checkbox" value="" id="Апартаменты">
+                <label class="form-check-label" for="Apartment">
+                    Апартаменты
+                </label>
+            </div>
+            <div class="common-check">
+                <input class="form-check-input type" type="checkbox" value="" id="Студия">
+                <label class="form-check-label" for="Studio">
+                    Студия
+                </label>
+            </div>
+        </div>
+        
+        <div class="search-sidebar__item">
+            <h6 class="search-sidebar__title mb-4">Удобства</h6>
+            <div class="common-check">
+                <input class="form-check-input goods" type="checkbox" value="" id="Разрешено с детьми">
+                <label class="form-check-label" for="Разрешено с детьми">
+                    Разрешено с детьми 
+                </label>
+            </div>
+            <div class="common-check">
+                <input class="form-check-input goods" type="checkbox" value="" id="Разрешено с животными">
+                <label class="form-check-label" for="Разрешено с животными">
+                    Разрешено с животными
+                </label>
+            </div>
+            <div class="common-check">
+                <input class="form-check-input goods" type="checkbox" value="" id="Интернет">
+                <label class="form-check-label" for="Интернет">
+                    Интернет
+                </label>
+            </div>
+            <div class="common-check">
+                <input class="form-check-input goods" type="checkbox" value="" id="Постельное белье">
+                <label class="form-check-label" for="Постельное белье">
+                    Постельное белье
+                </label>
+            </div>
+            <div class="common-check">
+                <input class="form-check-input goods" type="checkbox" value="" id="Фен">
+                <label class="form-check-label" for="Фен">
+                    Фен
+                </label>
+            </div>
+            <div class="common-check">
+                <input class="form-check-input goods" type="checkbox" value="" id="Кондиционер">
+                <label class="form-check-label" for="Кондиционер">
+                    Кондиционер
+                </label>
+            </div>
+            <div class="common-check">
+                <input class="form-check-input goods" type="checkbox" value="" id="Телевизор">
+                <label class="form-check-label" for="Телевизор">
+                    Телевизор
+                </label>
+            </div>
+            <div class="common-check">
+                <input class="form-check-input goods" type="checkbox" value="" id="Электрический чайник">
+                <label class="form-check-label" for="Электрический чайник">
+                    Электрический чайник
+                </label>
+            </div>
+            <div class="common-check">
+                <input class="form-check-input goods" type="checkbox" value="" id="Полотенце">
+                <label class="form-check-label" for="Полотенце">
+                    Полотенце
+                </label>
+            </div>
+        </div>
+        <div class="search-sidebar__item">
+            <h6 class="search-sidebar__title mb-4">Цена:</h6>
+            <div class="price-container">
+                <label for="minPrice" class="custom--range__text">от</label>
+                <input class="common-input text-gray-1000" type="text" name="minPrice" id="minPrice">
+                <label for="maxPrice" class="custom--range__text">до</label>
+                <input class="common-input text-gray-1000" type="text" name="maxPrice" id="maxPrice">
+            </div>
+        </div>
+    
+        <div class="search-sidebar__item">
+            <h6 class="search-sidebar__title mb-4">Количество гостей</h6>
+            <input class="common-input text-gray-1000 guest-mount" type="text" name="guest" id="mountGuest">
+        </div>
+        <div class="search-sidebar__item">
+            <h6 class="search-sidebar__title mb-4">Количество кроватей</h6>
+            <input class="common-input text-gray-1000 bed-mount" type="text" name="bed" id="mountBed">
+        </div>
+    </form>
+</div>
+<!-- =================== Search Sidebar End ======================= --> 
+                </div>
                 <div class="col-lg-8">
                     <div class="list-grid-item-wrapper row gy-4">
                         <div class="col-sm-6">
@@ -799,8 +915,7 @@
                         </div>    
                     </div>
                 </div>
-                <div class="col-lg-4 ps-lg-5">
-                    <!-- =================== Search Sidebar Start ======================= -->
+                <!--<div class="col-lg-4 ps-lg-5">
 <div class="search-sidebar">
     <form action="#" method="post" autocomplete="off">
         
@@ -915,8 +1030,7 @@
         </div>
     </form>
 </div>
-<!-- =================== Search Sidebar End ======================= --> 
-                </div>
+                </div>-->
             </div>
         </div>
     </section>
