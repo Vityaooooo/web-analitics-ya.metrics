@@ -47,6 +47,7 @@
  <noscript><div><img src="https://mc.yandex.ru/watch/99239422" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
  <!-- /Yandex.Metrika counter -->
     
+    
 <!--==================== Preloader Start ====================-->
   <div class="preloader">
     <div class="loader"></div>
@@ -154,7 +155,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
             <div class="modal-body">
-                <p class="font-20">Ваше задание найти жилье соответвующее критериям ниже. При успешном завершении вы получите сообщение, что задание выполнено успешно, в другом случае - сообщение "Это неверное предложение". При получении такого сообщения, пожалуйста, поищите еще &#128522</p>
+                <p class="font-20">Ваше задание найти жилье соответвующее критериям ниже. При успешном завершении вы получите сообщение, что задание выполнено успешно, в другом случае - сообщение "Это неверное предложение, поищите еще".</p>
                             <ul class="font-20" style="list-style-type: disc; padding: 20pt; margin: auto;" >
                                 <li><b>Апартаменты</b></li>
                         <li>Стоимость <b>до 6000₽ за сутки</b></li>
@@ -277,7 +278,7 @@
                 
                 <div class="property-details-wrapper">
                     <div class="property-details-item">
-                        <h6 class="property-details-item__title">Стильные апартаменты в центре</h6>
+                        <h6 class="property-details-item__title">Тип - апартаменты</h6>
                             <div class="detail-panel panel">
                                 <div data-v-68c62c7a class="object-data" short-description>
                                     <div class="row gy-4 d-flex flex-wrap">
@@ -623,22 +624,22 @@
             if (startTime) {
                 duration = Math.round((Date.now() - startTime) / 1000);
             }
-
+            
             ym(99239422, 'reachGoal', 'complete_book', {
                 duration: duration,
                 version: window.location.pathname.includes('version-a') ? 'A' : 'B' 
             });
-
+            
             // ym(99239422,'reachGoal','book_completed')
             // localStorage.removeItem('bookingStartTime');
         }
-        
+
         function sendExcel() {
             const URL_SHEET = 'https://script.google.com/macros/s/AKfycbxzVP9qqJeHVM2vfBx6mCUe5aKxYiMN0TjiistB4vqkYZIW4kjZzg1XFBJg9qGptZ2tGA/exec';
             const startTime = localStorage.getItem('bookingStartTime');
             const endTime = Date.now();
             const version = localStorage.getItem('version');
-            const user_ID = localStorage.getItem('user')
+            const user_ID = localStorage.getItem('user');
             const eventType = 'complete_booking';
 
             let details = {

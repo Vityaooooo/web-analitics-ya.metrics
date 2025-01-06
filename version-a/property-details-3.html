@@ -137,7 +137,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
             <div class="modal-body">
-                <p class="font-20">Ваше задание найти жилье соответвующее критериям ниже. При успешном завершении вы получите сообщение, что задание выполнено успешно, в другом случае - сообщение "Это неверное предложение". При получении такого сообщения, пожалуйста, поищите еще &#128522</p>
+                <p class="font-20">Ваше задание найти жилье соответвующее критериям ниже. При успешном завершении вы получите сообщение, что задание выполнено успешно, в другом случае - сообщение "Это неверное предложение, поищите еще".</p>
                             <ul class="font-20" style="list-style-type: disc; padding: 20pt; margin: auto;" >
                                 <li><b>Апартаменты</b></li>
                         <li>Стоимость <b>до 6000₽ за сутки</b></li>
@@ -260,7 +260,7 @@
                 
                 <div class="property-details-wrapper">
                     <div class="property-details-item">
-                        <h6 class="property-details-item__title">Звёздный комфорт </h6>
+                        <h6 class="property-details-item__title">Тип - Аппартаменты</h6>
                             <div class="detail-panel panel">
                                 <div data-v-68c62c7a class="object-data" short-description>
                                     <div class="row gy-4 d-flex flex-wrap">
@@ -579,7 +579,7 @@
     <script>
         const form = document.getElementById('metricsSubmit');
         form.addEventListener('submit', (evt) => {
-            alert('Это неверное предложение');
+            alert('Это неверное предложение, поищите еще');
             evt.preventDefault();
             const modal = document.getElementById('bookingModal');
             modal.style.display = 'none';
@@ -594,6 +594,6 @@
             body.style.padding = '0px';
         });
     </script>
-
+    
     </body>
 </html>

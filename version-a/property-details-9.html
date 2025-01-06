@@ -138,7 +138,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
             <div class="modal-body">
-                <p class="font-20">Ваше задание найти жилье соответвующее критериям ниже. При успешном завершении вы получите сообщение, что задание выполнено успешно, в другом случае - сообщение "Это неверное предложение". При получении такого сообщения, пожалуйста, поищите еще &#128522</p>
+                <p class="font-20">Ваше задание найти жилье соответвующее критериям ниже. При успешном завершении вы получите сообщение, что задание выполнено успешно, в другом случае - сообщение "Это неверное предложение, поищите еще".</p>
                             <ul class="font-20" style="list-style-type: disc; padding: 20pt; margin: auto;" >
                                 <li><b>Апартаменты</b></li>
                         <li>Стоимость <b>до 6000₽ за сутки</b></li>
@@ -261,7 +261,7 @@
                 
                 <div class="property-details-wrapper">
                     <div class="property-details-item">
-                        <h6 class="property-details-item__title">Четырёхместный номер стандарт</h6>
+                        <h6 class="property-details-item__title">Тип - номер в Отеле</h6>
                             <div class="detail-panel panel">
                                 <div class="row gy-4 d-flex flex-wrap">
                                     <div class="col-6 col-sm-4 col-lg-3">
@@ -309,10 +309,9 @@
                                         <p><b>Минимальный срок проживания:</b> от 1 суток</p>
                                         <h6 style="margin: 30px 0 0 0 ;">Правила объекта размещения</h6>
                                                     <ul class="text-list-two" style="display: grid;">
-                                                      <!-- <li class="text-list-two__item font-18">
-                                                        <span>Можно с детьми любого возраста
-                                                            дети 1 года и младше размещаются бесплатно, но без дополнительного спального места</span>
-                                                      </li> -->
+                                                        <li class="text-list-two__item font-18">
+                                                            <span>Нельзя с детьми до 4 лет</span>
+                                                            </li>
                                                       <li class="text-list-two__item font-18">
                                                         <span>Курение запрещено
                                                         </span>
@@ -584,7 +583,7 @@
     <script>
         const form = document.getElementById('metricsSubmit');
         form.addEventListener('submit', (evt) => {
-            alert('Это неверное предложение');
+            alert('Это неверное предложение, поищите еще');
             evt.preventDefault();
             const modal = document.getElementById('bookingModal');
             modal.style.display = 'none';
